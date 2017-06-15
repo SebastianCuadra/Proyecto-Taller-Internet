@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0ed458d3ffe84357a8c749ace9e32cdc" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_A26416_TTModel.ALUMNO" Width="1.5" PointX="5.25" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A26416_TTModel.ALUMNO_CLASE" Width="1.5" PointX="7.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A26416_TTModel.CARRERA" Width="1.5" PointX="3" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A26416_TTModel.CARRERA_RAMO" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A26416_TTModel.CLASE" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A26416_TTModel.ESTADO_CLASE" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A26416_TTModel.HISTORIAL_CURSO" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A26416_TTModel.MODULO" Width="1.5" PointX="0.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A26416_TTModel.MODULO_SALA" Width="1.5" PointX="3" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A26416_TTModel.PROFESOR" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A26416_TTModel.RAMO" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A26416_TTModel.RAMO_PROFESOR" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A26416_TTModel.RAMO_SECCION" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A26416_TTModel.SALA" Width="1.5" PointX="0.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A26416_TTModel.SECCION" Width="1.5" PointX="3" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A26416_TTModel.SECCION_MODULO" Width="1.5" PointX="5.25" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A26416_TTModel.SECCION_PROFESOR" Width="1.5" PointX="5.25" PointY="12.375" IsExpanded="true" />
+        <AssociationConnector Association="DB_A26416_TTModel.FK_ALUMNO_C_ALUMNO_CL_ALUMNO" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A26416_TTModel.FK_ALUMNO_CARRERA_A_CARRERA" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A26416_TTModel.FK_ALUMNO_SECCION_A_SECCION" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A26416_TTModel.FK_ALUMNO_C_ALUMNO_CL_CLASE" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A26416_TTModel.FK_CARRERA__CARRERA_R_CARRERA" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A26416_TTModel.FK_CLASE_CARRERA_C_CARRERA" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A26416_TTModel.FK_CARRERA__CARRERA_R_RAMO" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A26416_TTModel.FK_CLASE_MODULOSAL_MODULO_S" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A26416_TTModel.FK_CLASE_RAMOPROFE_RAMO_POF" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A26416_TTModel.FK_HISTORIA_CLASE_HIS_CLASE" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A26416_TTModel.FK_HISTORIA_ECLASE_HI_ESTADO_C" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A26416_TTModel.FK_MODULO_S_MODULO_SA_MODULO" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A26416_TTModel.FK_SECCION__SECCION_M_MODULO" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A26416_TTModel.FK_MODULO_S_MODULO_SA_SALA" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A26416_TTModel.FK_RAMO_POF_RAMO_POFE_PROFESOR" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A26416_TTModel.FK_SECCION__SECCION_P_PROFESOR" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A26416_TTModel.FK_RAMO_POF_RAMO_POFE_RAMO" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A26416_TTModel.FK_RAMO_SEC_RAMO_SECC_RAMO" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A26416_TTModel.FK_RAMO_SEC_RAMO_SECC_SECCION" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A26416_TTModel.FK_SECCION__SECCION_M_SECCION" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A26416_TTModel.FK_SECCION__SECCION_P_SECCION" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
