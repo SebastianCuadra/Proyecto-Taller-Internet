@@ -1,0 +1,39 @@
+﻿@model IEnumerable<clases.Models.RAMO_SECCION>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RAMO.NOMBRE_RAMO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SECCION.NOMBRE_SECCION)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RAMO.NOMBRE_RAMO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SECCION.NOMBRE_SECCION)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_SECCION_RAMO }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_SECCION_RAMO }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_SECCION_RAMO })
+        </td>
+    </tr>
+}
+
+</table>

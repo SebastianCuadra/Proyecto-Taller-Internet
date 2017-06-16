@@ -1,0 +1,42 @@
+﻿@model clases.Models.HISTORIAL_CURSO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HISTORIAL_CURSO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NUMERO_CLASE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUMERO_CLASE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CLASE.ESTADO_PROFESOR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLASE.ESTADO_PROFESOR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESTADO_CLASE.NOMBRE_ESTADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESTADO_CLASE.NOMBRE_ESTADO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_HISTORIAL }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

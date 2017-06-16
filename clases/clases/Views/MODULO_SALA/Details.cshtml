@@ -1,0 +1,34 @@
+﻿@model clases.Models.MODULO_SALA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MODULO_SALA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MODULO.ID_MODULO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MODULO.ID_MODULO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SALA.NOMBRE_SALA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SALA.NOMBRE_SALA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_MODULO_SALA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

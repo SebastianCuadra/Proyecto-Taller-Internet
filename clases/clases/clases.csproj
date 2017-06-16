@@ -127,106 +127,123 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\ALUMNO.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Content>
-    <Content Include="App_Code\ALUMNO_CLASE.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Content>
-    <Content Include="App_Code\CARRERA.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Content>
-    <Content Include="App_Code\CARRERA_RAMO.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Content>
-    <Content Include="App_Code\CLASE.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Content>
-    <Content Include="App_Code\ESTADO_CLASE.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Content>
-    <Content Include="App_Code\HISTORIAL_CURSO.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Content>
-    <Content Include="App_Code\MODULO.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Content>
-    <Content Include="App_Code\MODULO_SALA.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Content>
-    <Content Include="App_Code\PROFESOR.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Content>
-    <Content Include="App_Code\RAMO.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Content>
-    <Content Include="App_Code\RAMO_PROFESOR.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Content>
-    <Content Include="App_Code\RAMO_SECCION.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Content>
-    <Content Include="App_Code\SALA.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Content>
-    <Content Include="App_Code\SECCION.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Content>
-    <Content Include="App_Code\SECCION_MODULO.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Content>
-    <Content Include="App_Code\SECCION_PROFESOR.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Content>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ALUMNOesController.cs" />
+    <Compile Include="Controllers\ALUMNO_CLASEController.cs" />
+    <Compile Include="Controllers\CARRERAsController.cs" />
+    <Compile Include="Controllers\CARRERA_RAMOController.cs" />
+    <Compile Include="Controllers\CLASEsController.cs" />
+    <Compile Include="Controllers\ESTADO_CLASEController.cs" />
+    <Compile Include="Controllers\HISTORIAL_CURSOController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MODULOesController.cs" />
+    <Compile Include="Controllers\MODULO_SALAController.cs" />
+    <Compile Include="Controllers\PROFESORsController.cs" />
+    <Compile Include="Controllers\RAMOesController.cs" />
+    <Compile Include="Controllers\RAMO_PROFESORController.cs" />
+    <Compile Include="Controllers\RAMO_SECCIONController.cs" />
+    <Compile Include="Controllers\SALAsController.cs" />
+    <Compile Include="Controllers\SECCIONsController.cs" />
+    <Compile Include="Controllers\SECCION_MODULOController.cs" />
+    <Compile Include="Controllers\SECCION_PROFESORController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ALUMNO.cs">
+      <DependentUpon>mclases.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ALUMNO_CLASE.cs">
+      <DependentUpon>mclases.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CARRERA.cs">
+      <DependentUpon>mclases.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CARRERA_RAMO.cs">
+      <DependentUpon>mclases.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CLASE.cs">
+      <DependentUpon>mclases.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ESTADO_CLASE.cs">
+      <DependentUpon>mclases.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HISTORIAL_CURSO.cs">
+      <DependentUpon>mclases.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mclases.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mclases.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mclases.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mclases.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mclases.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mclases.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MODULO.cs">
+      <DependentUpon>mclases.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MODULO_SALA.cs">
+      <DependentUpon>mclases.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PROFESOR.cs">
+      <DependentUpon>mclases.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RAMO.cs">
+      <DependentUpon>mclases.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RAMO_PROFESOR.cs">
+      <DependentUpon>mclases.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RAMO_SECCION.cs">
+      <DependentUpon>mclases.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SALA.cs">
+      <DependentUpon>mclases.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SECCION.cs">
+      <DependentUpon>mclases.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SECCION_MODULO.cs">
+      <DependentUpon>mclases.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SECCION_PROFESOR.cs">
+      <DependentUpon>mclases.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="App_Code\Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\mclases.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>mclases.edmx</DependentUpon>
+      <LastGenOutput>mclases.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\mclases.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>mclases.edmx</DependentUpon>
+      <LastGenOutput>mclases.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="App_Code\Model1.edmx">
+    <EntityDeploy Include="Models\mclases.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>mclases.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="App_Code\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <Content Include="Models\mclases.edmx.diagram">
+      <DependentUpon>mclases.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -254,10 +271,94 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\ALUMNOes\Create.cshtml" />
+    <Content Include="Views\ALUMNOes\Delete.cshtml" />
+    <Content Include="Views\ALUMNOes\Details.cshtml" />
+    <Content Include="Views\ALUMNOes\Edit.cshtml" />
+    <Content Include="Views\ALUMNOes\Index.cshtml" />
+    <Content Include="Views\ALUMNO_CLASE\Create.cshtml" />
+    <Content Include="Views\ALUMNO_CLASE\Delete.cshtml" />
+    <Content Include="Views\ALUMNO_CLASE\Details.cshtml" />
+    <Content Include="Views\ALUMNO_CLASE\Edit.cshtml" />
+    <Content Include="Views\ALUMNO_CLASE\Index.cshtml" />
+    <Content Include="Views\CARRERAs\Create.cshtml" />
+    <Content Include="Views\CARRERAs\Delete.cshtml" />
+    <Content Include="Views\CARRERAs\Details.cshtml" />
+    <Content Include="Views\CARRERAs\Edit.cshtml" />
+    <Content Include="Views\CARRERAs\Index.cshtml" />
+    <Content Include="Views\CARRERA_RAMO\Create.cshtml" />
+    <Content Include="Views\CARRERA_RAMO\Delete.cshtml" />
+    <Content Include="Views\CARRERA_RAMO\Details.cshtml" />
+    <Content Include="Views\CARRERA_RAMO\Edit.cshtml" />
+    <Content Include="Views\CARRERA_RAMO\Index.cshtml" />
+    <Content Include="Views\CLASEs\Create.cshtml" />
+    <Content Include="Views\CLASEs\Delete.cshtml" />
+    <Content Include="Views\CLASEs\Details.cshtml" />
+    <Content Include="Views\CLASEs\Edit.cshtml" />
+    <Content Include="Views\CLASEs\Index.cshtml" />
+    <Content Include="Views\ESTADO_CLASE\Create.cshtml" />
+    <Content Include="Views\ESTADO_CLASE\Delete.cshtml" />
+    <Content Include="Views\ESTADO_CLASE\Details.cshtml" />
+    <Content Include="Views\ESTADO_CLASE\Edit.cshtml" />
+    <Content Include="Views\ESTADO_CLASE\Index.cshtml" />
+    <Content Include="Views\HISTORIAL_CURSO\Create.cshtml" />
+    <Content Include="Views\HISTORIAL_CURSO\Delete.cshtml" />
+    <Content Include="Views\HISTORIAL_CURSO\Details.cshtml" />
+    <Content Include="Views\HISTORIAL_CURSO\Edit.cshtml" />
+    <Content Include="Views\HISTORIAL_CURSO\Index.cshtml" />
+    <Content Include="Views\MODULOes\Create.cshtml" />
+    <Content Include="Views\MODULOes\Delete.cshtml" />
+    <Content Include="Views\MODULOes\Details.cshtml" />
+    <Content Include="Views\MODULOes\Edit.cshtml" />
+    <Content Include="Views\MODULOes\Index.cshtml" />
+    <Content Include="Views\MODULO_SALA\Create.cshtml" />
+    <Content Include="Views\MODULO_SALA\Delete.cshtml" />
+    <Content Include="Views\MODULO_SALA\Details.cshtml" />
+    <Content Include="Views\MODULO_SALA\Edit.cshtml" />
+    <Content Include="Views\MODULO_SALA\Index.cshtml" />
+    <Content Include="Views\PROFESORs\Create.cshtml" />
+    <Content Include="Views\PROFESORs\Delete.cshtml" />
+    <Content Include="Views\PROFESORs\Details.cshtml" />
+    <Content Include="Views\PROFESORs\Edit.cshtml" />
+    <Content Include="Views\PROFESORs\Index.cshtml" />
+    <Content Include="Views\RAMOes\Create.cshtml" />
+    <Content Include="Views\RAMOes\Delete.cshtml" />
+    <Content Include="Views\RAMOes\Details.cshtml" />
+    <Content Include="Views\RAMOes\Edit.cshtml" />
+    <Content Include="Views\RAMOes\Index.cshtml" />
+    <Content Include="Views\RAMO_PROFESOR\Create.cshtml" />
+    <Content Include="Views\RAMO_PROFESOR\Delete.cshtml" />
+    <Content Include="Views\RAMO_PROFESOR\Details.cshtml" />
+    <Content Include="Views\RAMO_PROFESOR\Edit.cshtml" />
+    <Content Include="Views\RAMO_PROFESOR\Index.cshtml" />
+    <Content Include="Views\RAMO_SECCION\Create.cshtml" />
+    <Content Include="Views\RAMO_SECCION\Delete.cshtml" />
+    <Content Include="Views\RAMO_SECCION\Details.cshtml" />
+    <Content Include="Views\RAMO_SECCION\Edit.cshtml" />
+    <Content Include="Views\RAMO_SECCION\Index.cshtml" />
+    <Content Include="Views\SALAs\Create.cshtml" />
+    <Content Include="Views\SALAs\Delete.cshtml" />
+    <Content Include="Views\SALAs\Details.cshtml" />
+    <Content Include="Views\SALAs\Edit.cshtml" />
+    <Content Include="Views\SALAs\Index.cshtml" />
+    <Content Include="Views\SECCIONs\Create.cshtml" />
+    <Content Include="Views\SECCIONs\Delete.cshtml" />
+    <Content Include="Views\SECCIONs\Details.cshtml" />
+    <Content Include="Views\SECCIONs\Edit.cshtml" />
+    <Content Include="Views\SECCIONs\Index.cshtml" />
+    <Content Include="Views\SECCION_MODULO\Create.cshtml" />
+    <Content Include="Views\SECCION_MODULO\Delete.cshtml" />
+    <Content Include="Views\SECCION_MODULO\Details.cshtml" />
+    <Content Include="Views\SECCION_MODULO\Edit.cshtml" />
+    <Content Include="Views\SECCION_MODULO\Index.cshtml" />
+    <Content Include="Views\SECCION_PROFESOR\Create.cshtml" />
+    <Content Include="Views\SECCION_PROFESOR\Delete.cshtml" />
+    <Content Include="Views\SECCION_PROFESOR\Details.cshtml" />
+    <Content Include="Views\SECCION_PROFESOR\Edit.cshtml" />
+    <Content Include="Views\SECCION_PROFESOR\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
