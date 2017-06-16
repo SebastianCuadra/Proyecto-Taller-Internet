@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_A26416_TTModel1StoreContainer" CdmEntityContainer="clasesEntities">
+    <EntitySetMapping Name="ALUMNO">
+      <EntityTypeMapping TypeName="DB_A26416_TTModel1.ALUMNO">
+        <MappingFragment StoreEntitySet="ALUMNO">
+          <ScalarProperty Name="ID_ALUMNO" ColumnName="ID_ALUMNO" />
+          <ScalarProperty Name="ID_CARRERA" ColumnName="ID_CARRERA" />
+          <ScalarProperty Name="ID_SECCION" ColumnName="ID_SECCION" />
+          <ScalarProperty Name="NOMBRE_ALUMNO" ColumnName="NOMBRE_ALUMNO" />
+          <ScalarProperty Name="AP_ALUMNO" ColumnName="AP_ALUMNO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ALUMNO_CLASE">
+      <EntityTypeMapping TypeName="DB_A26416_TTModel1.ALUMNO_CLASE">
+        <MappingFragment StoreEntitySet="ALUMNO_CLASE">
+          <ScalarProperty Name="ID_ALUMNO" ColumnName="ID_ALUMNO" />
+          <ScalarProperty Name="ID_CLASE" ColumnName="ID_CLASE" />
+          <ScalarProperty Name="ESTADO_ALUMNO" ColumnName="ESTADO_ALUMNO" />
+          <ScalarProperty Name="ID_ALUMNO_CLASE" ColumnName="ID_ALUMNO_CLASE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CARRERA">
+      <EntityTypeMapping TypeName="DB_A26416_TTModel1.CARRERA">
+        <MappingFragment StoreEntitySet="CARRERA">
+          <ScalarProperty Name="ID_CARRERA" ColumnName="ID_CARRERA" />
+          <ScalarProperty Name="NOMBRE_CARRERA" ColumnName="NOMBRE_CARRERA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CARRERA_RAMO">
+      <EntityTypeMapping TypeName="DB_A26416_TTModel1.CARRERA_RAMO">
+        <MappingFragment StoreEntitySet="CARRERA_RAMO">
+          <ScalarProperty Name="ID_RAMO" ColumnName="ID_RAMO" />
+          <ScalarProperty Name="ID_CARRERA" ColumnName="ID_CARRERA" />
+          <ScalarProperty Name="ID_CARRERA_RAMO" ColumnName="ID_CARRERA_RAMO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLASE">
+      <EntityTypeMapping TypeName="DB_A26416_TTModel1.CLASE">
+        <MappingFragment StoreEntitySet="CLASE">
+          <ScalarProperty Name="ID_CLASE" ColumnName="ID_CLASE" />
+          <ScalarProperty Name="ID_CARRERA" ColumnName="ID_CARRERA" />
+          <ScalarProperty Name="ID_RAMO_PROFE" ColumnName="ID_RAMO_PROFE" />
+          <ScalarProperty Name="ID_MODULO_SALA" ColumnName="ID_MODULO_SALA" />
+          <ScalarProperty Name="ESTADO_PROFESOR" ColumnName="ESTADO_PROFESOR" />
+          <ScalarProperty Name="FECHA_CLASE" ColumnName="FECHA_CLASE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO_CLASE">
+      <EntityTypeMapping TypeName="DB_A26416_TTModel1.ESTADO_CLASE">
+        <MappingFragment StoreEntitySet="ESTADO_CLASE">
+          <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+          <ScalarProperty Name="NOMBRE_ESTADO" ColumnName="NOMBRE_ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HISTORIAL_CURSO">
+      <EntityTypeMapping TypeName="DB_A26416_TTModel1.HISTORIAL_CURSO">
+        <MappingFragment StoreEntitySet="HISTORIAL_CURSO">
+          <ScalarProperty Name="ID_HISTORIAL" ColumnName="ID_HISTORIAL" />
+          <ScalarProperty Name="ID_CLASE" ColumnName="ID_CLASE" />
+          <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+          <ScalarProperty Name="NUMERO_CLASE" ColumnName="NUMERO_CLASE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MODULO">
+      <EntityTypeMapping TypeName="DB_A26416_TTModel1.MODULO">
+        <MappingFragment StoreEntitySet="MODULO">
+          <ScalarProperty Name="ID_MODULO" ColumnName="ID_MODULO" />
+          <ScalarProperty Name="NOMBRE_MODULO" ColumnName="NOMBRE_MODULO" />
+          <ScalarProperty Name="HORARIO" ColumnName="HORARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MODULO_SALA">
+      <EntityTypeMapping TypeName="DB_A26416_TTModel1.MODULO_SALA">
+        <MappingFragment StoreEntitySet="MODULO_SALA">
+          <ScalarProperty Name="ID_SALA" ColumnName="ID_SALA" />
+          <ScalarProperty Name="ID_MODULO" ColumnName="ID_MODULO" />
+          <ScalarProperty Name="ID_MODULO_SALA" ColumnName="ID_MODULO_SALA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROFESOR">
+      <EntityTypeMapping TypeName="DB_A26416_TTModel1.PROFESOR">
+        <MappingFragment StoreEntitySet="PROFESOR">
+          <ScalarProperty Name="ID_PROFESOR" ColumnName="ID_PROFESOR" />
+          <ScalarProperty Name="NOMBRE_PROFESOR" ColumnName="NOMBRE_PROFESOR" />
+          <ScalarProperty Name="AP_PROFESOR" ColumnName="AP_PROFESOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RAMO">
+      <EntityTypeMapping TypeName="DB_A26416_TTModel1.RAMO">
+        <MappingFragment StoreEntitySet="RAMO">
+          <ScalarProperty Name="ID_RAMO" ColumnName="ID_RAMO" />
+          <ScalarProperty Name="NOMBRE_RAMO" ColumnName="NOMBRE_RAMO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RAMO_PROFESOR">
+      <EntityTypeMapping TypeName="DB_A26416_TTModel1.RAMO_PROFESOR">
+        <MappingFragment StoreEntitySet="RAMO_PROFESOR">
+          <ScalarProperty Name="ID_PROFESOR" ColumnName="ID_PROFESOR" />
+          <ScalarProperty Name="ID_RAMO" ColumnName="ID_RAMO" />
+          <ScalarProperty Name="ID_RAMO_PROFE" ColumnName="ID_RAMO_PROFE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RAMO_SECCION">
+      <EntityTypeMapping TypeName="DB_A26416_TTModel1.RAMO_SECCION">
+        <MappingFragment StoreEntitySet="RAMO_SECCION">
+          <ScalarProperty Name="ID_SECCION" ColumnName="ID_SECCION" />
+          <ScalarProperty Name="ID_RAMO" ColumnName="ID_RAMO" />
+          <ScalarProperty Name="ID_SECCION_RAMO" ColumnName="ID_SECCION_RAMO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SALA">
+      <EntityTypeMapping TypeName="DB_A26416_TTModel1.SALA">
+        <MappingFragment StoreEntitySet="SALA">
+          <ScalarProperty Name="ID_SALA" ColumnName="ID_SALA" />
+          <ScalarProperty Name="NOMBRE_SALA" ColumnName="NOMBRE_SALA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SECCION">
+      <EntityTypeMapping TypeName="DB_A26416_TTModel1.SECCION">
+        <MappingFragment StoreEntitySet="SECCION">
+          <ScalarProperty Name="ID_SECCION" ColumnName="ID_SECCION" />
+          <ScalarProperty Name="NOMBRE_SECCION" ColumnName="NOMBRE_SECCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SECCION_MODULO">
+      <EntityTypeMapping TypeName="DB_A26416_TTModel1.SECCION_MODULO">
+        <MappingFragment StoreEntitySet="SECCION_MODULO">
+          <ScalarProperty Name="ID_MODULO" ColumnName="ID_MODULO" />
+          <ScalarProperty Name="ID_SECCION" ColumnName="ID_SECCION" />
+          <ScalarProperty Name="ID_MODULO_SECCION" ColumnName="ID_MODULO_SECCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SECCION_PROFESOR">
+      <EntityTypeMapping TypeName="DB_A26416_TTModel1.SECCION_PROFESOR">
+        <MappingFragment StoreEntitySet="SECCION_PROFESOR">
+          <ScalarProperty Name="ID_PROFESOR" ColumnName="ID_PROFESOR" />
+          <ScalarProperty Name="ID_SECCION" ColumnName="ID_SECCION" />
+          <ScalarProperty Name="ID_PROFE_SECCION" ColumnName="ID_PROFE_SECCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

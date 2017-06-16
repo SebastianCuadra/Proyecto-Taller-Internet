@@ -1,0 +1,57 @@
+﻿@model IEnumerable<clases.Models.CLASE>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ESTADO_PROFESOR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_CLASE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CARRERA.NOMBRE_CARRERA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MODULO_SALA.ID_MODULO_SALA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RAMO_PROFESOR.ID_RAMO_PROFE)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADO_PROFESOR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_CLASE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CARRERA.NOMBRE_CARRERA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MODULO_SALA.ID_MODULO_SALA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RAMO_PROFESOR.ID_RAMO_PROFE)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_CLASE }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_CLASE }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_CLASE })
+        </td>
+    </tr>
+}
+
+</table>

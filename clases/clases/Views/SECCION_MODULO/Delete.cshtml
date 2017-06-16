@@ -1,0 +1,40 @@
+﻿@model clases.Models.SECCION_MODULO
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SECCION_MODULO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MODULO.ID_MODULO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MODULO.ID_MODULO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SECCION.NOMBRE_SECCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SECCION.NOMBRE_SECCION)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

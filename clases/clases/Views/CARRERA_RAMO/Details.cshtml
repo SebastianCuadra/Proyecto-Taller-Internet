@@ -1,0 +1,34 @@
+﻿@model clases.Models.CARRERA_RAMO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CARRERA_RAMO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CARRERA.NOMBRE_CARRERA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CARRERA.NOMBRE_CARRERA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RAMO.NOMBRE_RAMO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RAMO.NOMBRE_RAMO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_CARRERA_RAMO }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

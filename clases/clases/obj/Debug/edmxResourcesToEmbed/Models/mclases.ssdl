@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_A26416_TTModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ALUMNO">
+    <Key>
+      <PropertyRef Name="ID_ALUMNO" />
+    </Key>
+    <Property Name="ID_ALUMNO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_CARRERA" Type="int" />
+    <Property Name="ID_SECCION" Type="int" />
+    <Property Name="NOMBRE_ALUMNO" Type="varchar" MaxLength="25" />
+    <Property Name="AP_ALUMNO" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="ALUMNO_CLASE">
+    <Key>
+      <PropertyRef Name="ID_ALUMNO_CLASE" />
+    </Key>
+    <Property Name="ID_ALUMNO" Type="int" />
+    <Property Name="ID_CLASE" Type="int" />
+    <Property Name="ESTADO_ALUMNO" Type="bit" />
+    <Property Name="ID_ALUMNO_CLASE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CARRERA">
+    <Key>
+      <PropertyRef Name="ID_CARRERA" />
+    </Key>
+    <Property Name="ID_CARRERA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE_CARRERA" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CARRERA_RAMO">
+    <Key>
+      <PropertyRef Name="ID_CARRERA_RAMO" />
+    </Key>
+    <Property Name="ID_RAMO" Type="int" />
+    <Property Name="ID_CARRERA" Type="int" />
+    <Property Name="ID_CARRERA_RAMO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLASE">
+    <Key>
+      <PropertyRef Name="ID_CLASE" />
+    </Key>
+    <Property Name="ID_CLASE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_CARRERA" Type="int" />
+    <Property Name="ID_RAMO_PROFE" Type="int" />
+    <Property Name="ID_MODULO_SALA" Type="int" />
+    <Property Name="ESTADO_PROFESOR" Type="varchar" MaxLength="25" />
+    <Property Name="FECHA_CLASE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ESTADO_CLASE">
+    <Key>
+      <PropertyRef Name="ID_ESTADO" />
+    </Key>
+    <Property Name="ID_ESTADO" Type="int" Nullable="false" />
+    <Property Name="NOMBRE_ESTADO" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="HISTORIAL_CURSO">
+    <Key>
+      <PropertyRef Name="ID_HISTORIAL" />
+    </Key>
+    <Property Name="ID_HISTORIAL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_CLASE" Type="int" />
+    <Property Name="ID_ESTADO" Type="int" />
+    <Property Name="NUMERO_CLASE" Type="int" />
+  </EntityType>
+  <EntityType Name="MODULO">
+    <Key>
+      <PropertyRef Name="ID_MODULO" />
+    </Key>
+    <Property Name="ID_MODULO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE_MODULO" Type="int" />
+    <Property Name="HORARIO" Type="time" Precision="7" />
+  </EntityType>
+  <EntityType Name="MODULO_SALA">
+    <Key>
+      <PropertyRef Name="ID_MODULO_SALA" />
+    </Key>
+    <Property Name="ID_SALA" Type="int" />
+    <Property Name="ID_MODULO" Type="int" />
+    <Property Name="ID_MODULO_SALA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PROFESOR">
+    <Key>
+      <PropertyRef Name="ID_PROFESOR" />
+    </Key>
+    <Property Name="ID_PROFESOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE_PROFESOR" Type="varchar" MaxLength="25" />
+    <Property Name="AP_PROFESOR" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="RAMO">
+    <Key>
+      <PropertyRef Name="ID_RAMO" />
+    </Key>
+    <Property Name="ID_RAMO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE_RAMO" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RAMO_PROFESOR">
+    <Key>
+      <PropertyRef Name="ID_RAMO_PROFE" />
+    </Key>
+    <Property Name="ID_PROFESOR" Type="int" />
+    <Property Name="ID_RAMO" Type="int" />
+    <Property Name="ID_RAMO_PROFE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RAMO_SECCION">
+    <Key>
+      <PropertyRef Name="ID_SECCION_RAMO" />
+    </Key>
+    <Property Name="ID_SECCION" Type="int" />
+    <Property Name="ID_RAMO" Type="int" />
+    <Property Name="ID_SECCION_RAMO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SALA">
+    <Key>
+      <PropertyRef Name="ID_SALA" />
+    </Key>
+    <Property Name="ID_SALA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE_SALA" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="SECCION">
+    <Key>
+      <PropertyRef Name="ID_SECCION" />
+    </Key>
+    <Property Name="ID_SECCION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE_SECCION" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="SECCION_MODULO">
+    <Key>
+      <PropertyRef Name="ID_MODULO_SECCION" />
+    </Key>
+    <Property Name="ID_MODULO" Type="int" />
+    <Property Name="ID_SECCION" Type="int" />
+    <Property Name="ID_MODULO_SECCION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SECCION_PROFESOR">
+    <Key>
+      <PropertyRef Name="ID_PROFE_SECCION" />
+    </Key>
+    <Property Name="ID_PROFESOR" Type="int" />
+    <Property Name="ID_SECCION" Type="int" />
+    <Property Name="ID_PROFE_SECCION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ALUMNO_C_ALUMNO_CL_ALUMNO">
+    <End Role="ALUMNO" Type="Self.ALUMNO" Multiplicity="0..1" />
+    <End Role="ALUMNO_CLASE" Type="Self.ALUMNO_CLASE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ALUMNO">
+        <PropertyRef Name="ID_ALUMNO" />
+      </Principal>
+      <Dependent Role="ALUMNO_CLASE">
+        <PropertyRef Name="ID_ALUMNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ALUMNO_C_ALUMNO_CL_CLASE">
+    <End Role="CLASE" Type="Self.CLASE" Multiplicity="0..1" />
+    <End Role="ALUMNO_CLASE" Type="Self.ALUMNO_CLASE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASE">
+        <PropertyRef Name="ID_CLASE" />
+      </Principal>
+      <Dependent Role="ALUMNO_CLASE">
+        <PropertyRef Name="ID_CLASE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ALUMNO_CARRERA_A_CARRERA">
+    <End Role="CARRERA" Type="Self.CARRERA" Multiplicity="0..1" />
+    <End Role="ALUMNO" Type="Self.ALUMNO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CARRERA">
+        <PropertyRef Name="ID_CARRERA" />
+      </Principal>
+      <Dependent Role="ALUMNO">
+        <PropertyRef Name="ID_CARRERA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ALUMNO_SECCION_A_SECCION">
+    <End Role="SECCION" Type="Self.SECCION" Multiplicity="0..1" />
+    <End Role="ALUMNO" Type="Self.ALUMNO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SECCION">
+        <PropertyRef Name="ID_SECCION" />
+      </Principal>
+      <Dependent Role="ALUMNO">
+        <PropertyRef Name="ID_SECCION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CARRERA__CARRERA_R_CARRERA">
+    <End Role="CARRERA" Type="Self.CARRERA" Multiplicity="0..1" />
+    <End Role="CARRERA_RAMO" Type="Self.CARRERA_RAMO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CARRERA">
+        <PropertyRef Name="ID_CARRERA" />
+      </Principal>
+      <Dependent Role="CARRERA_RAMO">
+        <PropertyRef Name="ID_CARRERA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CARRERA__CARRERA_R_RAMO">
+    <End Role="RAMO" Type="Self.RAMO" Multiplicity="0..1" />
+    <End Role="CARRERA_RAMO" Type="Self.CARRERA_RAMO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RAMO">
+        <PropertyRef Name="ID_RAMO" />
+      </Principal>
+      <Dependent Role="CARRERA_RAMO">
+        <PropertyRef Name="ID_RAMO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLASE_CARRERA_C_CARRERA">
+    <End Role="CARRERA" Type="Self.CARRERA" Multiplicity="0..1" />
+    <End Role="CLASE" Type="Self.CLASE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CARRERA">
+        <PropertyRef Name="ID_CARRERA" />
+      </Principal>
+      <Dependent Role="CLASE">
+        <PropertyRef Name="ID_CARRERA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLASE_MODULOSAL_MODULO_S">
+    <End Role="MODULO_SALA" Type="Self.MODULO_SALA" Multiplicity="0..1" />
+    <End Role="CLASE" Type="Self.CLASE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MODULO_SALA">
+        <PropertyRef Name="ID_MODULO_SALA" />
+      </Principal>
+      <Dependent Role="CLASE">
+        <PropertyRef Name="ID_MODULO_SALA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLASE_RAMOPROFE_RAMO_POF">
+    <End Role="RAMO_PROFESOR" Type="Self.RAMO_PROFESOR" Multiplicity="0..1" />
+    <End Role="CLASE" Type="Self.CLASE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RAMO_PROFESOR">
+        <PropertyRef Name="ID_RAMO_PROFE" />
+      </Principal>
+      <Dependent Role="CLASE">
+        <PropertyRef Name="ID_RAMO_PROFE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HISTORIA_CLASE_HIS_CLASE">
+    <End Role="CLASE" Type="Self.CLASE" Multiplicity="0..1" />
+    <End Role="HISTORIAL_CURSO" Type="Self.HISTORIAL_CURSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASE">
+        <PropertyRef Name="ID_CLASE" />
+      </Principal>
+      <Dependent Role="HISTORIAL_CURSO">
+        <PropertyRef Name="ID_CLASE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HISTORIA_ECLASE_HI_ESTADO_C">
+    <End Role="ESTADO_CLASE" Type="Self.ESTADO_CLASE" Multiplicity="0..1" />
+    <End Role="HISTORIAL_CURSO" Type="Self.HISTORIAL_CURSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_CLASE">
+        <PropertyRef Name="ID_ESTADO" />
+      </Principal>
+      <Dependent Role="HISTORIAL_CURSO">
+        <PropertyRef Name="ID_ESTADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MODULO_S_MODULO_SA_MODULO">
+    <End Role="MODULO" Type="Self.MODULO" Multiplicity="0..1" />
+    <End Role="MODULO_SALA" Type="Self.MODULO_SALA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MODULO">
+        <PropertyRef Name="ID_MODULO" />
+      </Principal>
+      <Dependent Role="MODULO_SALA">
+        <PropertyRef Name="ID_MODULO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MODULO_S_MODULO_SA_SALA">
+    <End Role="SALA" Type="Self.SALA" Multiplicity="0..1" />
+    <End Role="MODULO_SALA" Type="Self.MODULO_SALA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SALA">
+        <PropertyRef Name="ID_SALA" />
+      </Principal>
+      <Dependent Role="MODULO_SALA">
+        <PropertyRef Name="ID_SALA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RAMO_POF_RAMO_POFE_PROFESOR">
+    <End Role="PROFESOR" Type="Self.PROFESOR" Multiplicity="0..1" />
+    <End Role="RAMO_PROFESOR" Type="Self.RAMO_PROFESOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROFESOR">
+        <PropertyRef Name="ID_PROFESOR" />
+      </Principal>
+      <Dependent Role="RAMO_PROFESOR">
+        <PropertyRef Name="ID_PROFESOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RAMO_POF_RAMO_POFE_RAMO">
+    <End Role="RAMO" Type="Self.RAMO" Multiplicity="0..1" />
+    <End Role="RAMO_PROFESOR" Type="Self.RAMO_PROFESOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RAMO">
+        <PropertyRef Name="ID_RAMO" />
+      </Principal>
+      <Dependent Role="RAMO_PROFESOR">
+        <PropertyRef Name="ID_RAMO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RAMO_SEC_RAMO_SECC_RAMO">
+    <End Role="RAMO" Type="Self.RAMO" Multiplicity="0..1" />
+    <End Role="RAMO_SECCION" Type="Self.RAMO_SECCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RAMO">
+        <PropertyRef Name="ID_RAMO" />
+      </Principal>
+      <Dependent Role="RAMO_SECCION">
+        <PropertyRef Name="ID_RAMO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RAMO_SEC_RAMO_SECC_SECCION">
+    <End Role="SECCION" Type="Self.SECCION" Multiplicity="0..1" />
+    <End Role="RAMO_SECCION" Type="Self.RAMO_SECCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SECCION">
+        <PropertyRef Name="ID_SECCION" />
+      </Principal>
+      <Dependent Role="RAMO_SECCION">
+        <PropertyRef Name="ID_SECCION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SECCION__SECCION_M_MODULO">
+    <End Role="MODULO" Type="Self.MODULO" Multiplicity="0..1" />
+    <End Role="SECCION_MODULO" Type="Self.SECCION_MODULO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MODULO">
+        <PropertyRef Name="ID_MODULO" />
+      </Principal>
+      <Dependent Role="SECCION_MODULO">
+        <PropertyRef Name="ID_MODULO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SECCION__SECCION_M_SECCION">
+    <End Role="SECCION" Type="Self.SECCION" Multiplicity="0..1" />
+    <End Role="SECCION_MODULO" Type="Self.SECCION_MODULO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SECCION">
+        <PropertyRef Name="ID_SECCION" />
+      </Principal>
+      <Dependent Role="SECCION_MODULO">
+        <PropertyRef Name="ID_SECCION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SECCION__SECCION_P_PROFESOR">
+    <End Role="PROFESOR" Type="Self.PROFESOR" Multiplicity="0..1" />
+    <End Role="SECCION_PROFESOR" Type="Self.SECCION_PROFESOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROFESOR">
+        <PropertyRef Name="ID_PROFESOR" />
+      </Principal>
+      <Dependent Role="SECCION_PROFESOR">
+        <PropertyRef Name="ID_PROFESOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SECCION__SECCION_P_SECCION">
+    <End Role="SECCION" Type="Self.SECCION" Multiplicity="0..1" />
+    <End Role="SECCION_PROFESOR" Type="Self.SECCION_PROFESOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SECCION">
+        <PropertyRef Name="ID_SECCION" />
+      </Principal>
+      <Dependent Role="SECCION_PROFESOR">
+        <PropertyRef Name="ID_SECCION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_A26416_TTModel1StoreContainer">
+    <EntitySet Name="ALUMNO" EntityType="Self.ALUMNO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ALUMNO_CLASE" EntityType="Self.ALUMNO_CLASE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CARRERA" EntityType="Self.CARRERA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CARRERA_RAMO" EntityType="Self.CARRERA_RAMO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLASE" EntityType="Self.CLASE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ESTADO_CLASE" EntityType="Self.ESTADO_CLASE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HISTORIAL_CURSO" EntityType="Self.HISTORIAL_CURSO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MODULO" EntityType="Self.MODULO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MODULO_SALA" EntityType="Self.MODULO_SALA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROFESOR" EntityType="Self.PROFESOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RAMO" EntityType="Self.RAMO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RAMO_PROFESOR" EntityType="Self.RAMO_PROFESOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RAMO_SECCION" EntityType="Self.RAMO_SECCION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SALA" EntityType="Self.SALA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SECCION" EntityType="Self.SECCION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SECCION_MODULO" EntityType="Self.SECCION_MODULO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SECCION_PROFESOR" EntityType="Self.SECCION_PROFESOR" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ALUMNO_C_ALUMNO_CL_ALUMNO" Association="Self.FK_ALUMNO_C_ALUMNO_CL_ALUMNO">
+      <End Role="ALUMNO" EntitySet="ALUMNO" />
+      <End Role="ALUMNO_CLASE" EntitySet="ALUMNO_CLASE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ALUMNO_C_ALUMNO_CL_CLASE" Association="Self.FK_ALUMNO_C_ALUMNO_CL_CLASE">
+      <End Role="CLASE" EntitySet="CLASE" />
+      <End Role="ALUMNO_CLASE" EntitySet="ALUMNO_CLASE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ALUMNO_CARRERA_A_CARRERA" Association="Self.FK_ALUMNO_CARRERA_A_CARRERA">
+      <End Role="CARRERA" EntitySet="CARRERA" />
+      <End Role="ALUMNO" EntitySet="ALUMNO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ALUMNO_SECCION_A_SECCION" Association="Self.FK_ALUMNO_SECCION_A_SECCION">
+      <End Role="SECCION" EntitySet="SECCION" />
+      <End Role="ALUMNO" EntitySet="ALUMNO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CARRERA__CARRERA_R_CARRERA" Association="Self.FK_CARRERA__CARRERA_R_CARRERA">
+      <End Role="CARRERA" EntitySet="CARRERA" />
+      <End Role="CARRERA_RAMO" EntitySet="CARRERA_RAMO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CARRERA__CARRERA_R_RAMO" Association="Self.FK_CARRERA__CARRERA_R_RAMO">
+      <End Role="RAMO" EntitySet="RAMO" />
+      <End Role="CARRERA_RAMO" EntitySet="CARRERA_RAMO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLASE_CARRERA_C_CARRERA" Association="Self.FK_CLASE_CARRERA_C_CARRERA">
+      <End Role="CARRERA" EntitySet="CARRERA" />
+      <End Role="CLASE" EntitySet="CLASE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLASE_MODULOSAL_MODULO_S" Association="Self.FK_CLASE_MODULOSAL_MODULO_S">
+      <End Role="MODULO_SALA" EntitySet="MODULO_SALA" />
+      <End Role="CLASE" EntitySet="CLASE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLASE_RAMOPROFE_RAMO_POF" Association="Self.FK_CLASE_RAMOPROFE_RAMO_POF">
+      <End Role="RAMO_PROFESOR" EntitySet="RAMO_PROFESOR" />
+      <End Role="CLASE" EntitySet="CLASE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HISTORIA_CLASE_HIS_CLASE" Association="Self.FK_HISTORIA_CLASE_HIS_CLASE">
+      <End Role="CLASE" EntitySet="CLASE" />
+      <End Role="HISTORIAL_CURSO" EntitySet="HISTORIAL_CURSO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HISTORIA_ECLASE_HI_ESTADO_C" Association="Self.FK_HISTORIA_ECLASE_HI_ESTADO_C">
+      <End Role="ESTADO_CLASE" EntitySet="ESTADO_CLASE" />
+      <End Role="HISTORIAL_CURSO" EntitySet="HISTORIAL_CURSO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MODULO_S_MODULO_SA_MODULO" Association="Self.FK_MODULO_S_MODULO_SA_MODULO">
+      <End Role="MODULO" EntitySet="MODULO" />
+      <End Role="MODULO_SALA" EntitySet="MODULO_SALA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MODULO_S_MODULO_SA_SALA" Association="Self.FK_MODULO_S_MODULO_SA_SALA">
+      <End Role="SALA" EntitySet="SALA" />
+      <End Role="MODULO_SALA" EntitySet="MODULO_SALA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RAMO_POF_RAMO_POFE_PROFESOR" Association="Self.FK_RAMO_POF_RAMO_POFE_PROFESOR">
+      <End Role="PROFESOR" EntitySet="PROFESOR" />
+      <End Role="RAMO_PROFESOR" EntitySet="RAMO_PROFESOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RAMO_POF_RAMO_POFE_RAMO" Association="Self.FK_RAMO_POF_RAMO_POFE_RAMO">
+      <End Role="RAMO" EntitySet="RAMO" />
+      <End Role="RAMO_PROFESOR" EntitySet="RAMO_PROFESOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RAMO_SEC_RAMO_SECC_RAMO" Association="Self.FK_RAMO_SEC_RAMO_SECC_RAMO">
+      <End Role="RAMO" EntitySet="RAMO" />
+      <End Role="RAMO_SECCION" EntitySet="RAMO_SECCION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RAMO_SEC_RAMO_SECC_SECCION" Association="Self.FK_RAMO_SEC_RAMO_SECC_SECCION">
+      <End Role="SECCION" EntitySet="SECCION" />
+      <End Role="RAMO_SECCION" EntitySet="RAMO_SECCION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SECCION__SECCION_M_MODULO" Association="Self.FK_SECCION__SECCION_M_MODULO">
+      <End Role="MODULO" EntitySet="MODULO" />
+      <End Role="SECCION_MODULO" EntitySet="SECCION_MODULO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SECCION__SECCION_M_SECCION" Association="Self.FK_SECCION__SECCION_M_SECCION">
+      <End Role="SECCION" EntitySet="SECCION" />
+      <End Role="SECCION_MODULO" EntitySet="SECCION_MODULO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SECCION__SECCION_P_PROFESOR" Association="Self.FK_SECCION__SECCION_P_PROFESOR">
+      <End Role="PROFESOR" EntitySet="PROFESOR" />
+      <End Role="SECCION_PROFESOR" EntitySet="SECCION_PROFESOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SECCION__SECCION_P_SECCION" Association="Self.FK_SECCION__SECCION_P_SECCION">
+      <End Role="SECCION" EntitySet="SECCION" />
+      <End Role="SECCION_PROFESOR" EntitySet="SECCION_PROFESOR" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
